@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: blue-green-demo
+  labels:
+    app: blue-green-demo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: blue-green-demo
+  template:
+    metadata:
+      labels:
+        app: blue-green-demo
+    spec:
+      containers:
+      - name: demo
+        image: sd171991/newproject:stable
+        ports:
+        - containerPort: 80
