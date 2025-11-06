@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: blue-green-demo
+  name: deployment1
   labels:
     app: blue-green-demo
 spec:
