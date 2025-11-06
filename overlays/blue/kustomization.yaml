@@ -4,7 +4,7 @@ resources:
 patches:
   - target:
       kind: Deployment
-      name: blue-green-demo
+      name: deployment1
     patch: |
       - op: replace
         path: /spec/template/spec/containers/0/image
